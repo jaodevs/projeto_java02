@@ -23,6 +23,18 @@ public class Contato {
     public void setCelular(String celular) {
         this.celular = celular;
     }
+    
+    @Override
+    public String toString() {
+        return "Contato [celular=" + celular + ", email=" + email + ", fixo=" + fixo + "]";
+    }
+
+    public String toJson(){
+        return "{ \"email\": \"" + getEmail() + "\"," +
+                "  \"fixo\": \"" + getFixo() + "\"," +
+                "  \"celular\": \"" + getCelular() + "\"},";
+    }  
+    
 
     
 }

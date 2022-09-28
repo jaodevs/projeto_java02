@@ -80,6 +80,16 @@ public class Endereco {
         this.bairro = bairro;
     }
 
-    
+    @Override
+    public String toString() {
+        return "Endereco: " + logradouro + " " + nome + ", numero: " + numero + ", cep: " + cep + ", cidade: "
+                + cidade + ", uf: " + uf + ", bairro: " + bairro;
+    }
 
+    public String toJson() {
+        return "{ \"logradouro\": \"" + logradouro + "\", \"nome\": \"" + nome + "\", \"numero\": \"" + numero
+                + "\", \"cep\": \"" + cep + "\", \"cidade\": \"" + cidade + "\", \"uf\": \"" + uf + "\", \"bairro\": \""
+                + bairro + "\" }";
+    }
 }
+

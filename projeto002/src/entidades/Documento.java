@@ -63,9 +63,15 @@ public class Documento {
         return (calculaCPF(cpf, 9) && calculaCPF(cpf, 10));
     }
 
-    public static void main(String[] args) {
-        Documento doc = new Documento("111.444.787-35");
+    @Override
+    public String toString() {
+        return "Documento [cnh=" + cnh + ", cpf=" + cpf + ", rg=" + rg + "]";
     }
 
-    
+    public String toJson() {
+        return "{ \"rg\": \"" + getRg() + "\",\"cpf\": \"" + getCpf() + "\",\"cnh\": \"" + getCnh() + "\" },";
+    }
+
 }
+
+ 
